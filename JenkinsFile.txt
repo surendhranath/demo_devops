@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    stages{
+     stage('Build')
+    {
+        steps{
+         echo 'This is Build Process'
+    }
+    }
+    stage('Deploy'){
+        steps{
+            echo 'This is Deployment Step'
+        }
+    }
+    stage('Dev Unit Test'){
+        steps{
+            echo 'This is for Dev Test'
+            
+        }
+    }
+    stage('Dev E2E Test'){
+        steps{
+            echo 'This is for E2E'
+        }
+    }
+   }
+}
+
+
+
+

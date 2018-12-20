@@ -1,10 +1,12 @@
 pipeline {
     agent any
+    dockerfile true
     stages{
      stage('Build')
     {
         steps{
          echo 'This is Build Process'
+         sh 'echo myCustomEnvVar = $myCustomEnvVar'
     }
     }
     stage('Deploy'){
